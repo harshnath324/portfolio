@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yatriva | Contact</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#172033;
+}
+
+
+/* NAVBAR */
+
+nav{
+    height:78px;
+    padding:0 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:white;
+    border-bottom:1px solid #edf0f4;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:2px;
+    color:#102a43;
+}
+
+.logo span{
+    color:#f28c28;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#52606d;
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#f28c28;
+}
+
+.contact-btn{
+    background:#f28c28;
+    color:white !important;
+    padding:12px 21px;
+    border-radius:25px;
+}
+
+
+/* HEADER */
+
+.header{
+    text-align:center;
+    padding:90px 20px;
+    background:#eef7ff;
+}
+
+.header .label{
+    color:#f28c28;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.header h1{
+    color:#102a43;
+    font-size:58px;
+    margin:18px 0 12px;
+}
+
+.header p{
+    color:#7b8794;
+    font-size:18px;
+}
+
+
+/* SECTION */
+
+section{
+    padding:70px 8%;
+}
+
+
+/* CONTACT */
+
+.contact{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:25px;
+}
+
+
+/* INFO */
+
+.info{
+    background:#102a43;
+    color:white;
+    border-radius:22px;
+    padding:40px;
+}
+
+.info h2{
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.info-box{
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.info-box:last-child{
+    border:0;
+}
+
+.icon{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.info-box h3{
+    margin-bottom:7px;
+}
+
+.info-box p{
+    color:#bcccdc;
+    line-height:1.6;
+}
+
+
+/* SOCIAL */
+
+.social{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.social span{
+    padding:9px 14px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    color:#d9e2ec;
+    font-size:13px;
+}
+
+
+/* FORM */
+
+.form{
+    background:white;
+    padding:40px;
+    border-radius:22px;
+    box-shadow:0 10px 35px rgba(16,42,67,.08);
+    border:1px solid #edf0f4;
+}
+
+.form h2{
+    color:#102a43;
+    margin-bottom:25px;
+}
+
+.field{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    color:#334e68;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #d9e2ec;
+    border-radius:9px;
+    background:#fbfdff;
+    outline:none;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#f28c28;
+}
+
+textarea{
+    height:140px;
+    resize:none;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:0;
+    border-radius:30px;
+    background:#f28c28;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#d97516;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:35px 8%;
+    background:#102a43;
+    color:#bcccdc;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer strong{
+    color:white;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1000px){
+
+    nav{
+        padding:0 5%;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
+    section{
+        padding:60px 6%;
+    }
+
+    .contact{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .info{
+        padding:30px;
+    }
+
+    .form{
+        padding:30px;
+    }
+
+    .header h1{
+        font-size:50px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    /* NAVBAR */
+
+    nav{
+        height:auto;
+        padding:18px 5%;
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .logo{
+        font-size:25px;
+    }
+
+    nav ul{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .contact-btn{
+        padding:9px 15px;
+    }
+
+
+    /* HEADER */
+
+    .header{
+        padding:65px 20px;
+    }
+
+    .header .label{
+        font-size:11px;
+        letter-spacing:2px;
+    }
+
+    .header h1{
+        font-size:43px;
+        margin:15px 0 10px;
+    }
+
+    .header p{
+        font-size:16px;
+        line-height:1.5;
+    }
+
+
+    /* SECTION */
+
+    section{
+        padding:50px 5%;
+    }
+
+
+    /* CONTACT */
+
+    .contact{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+
+    /* INFO */
+
+    .info{
+        padding:30px 25px;
+        border-radius:18px;
+    }
+
+    .info h2{
+        font-size:27px;
+    }
+
+    .info-box{
+        padding:18px 0;
+    }
+
+
+    /* FORM */
+
+    .form{
+        padding:30px 25px;
+        border-radius:18px;
+    }
+
+    .form h2{
+        font-size:24px;
+    }
+
+    input,
+    textarea{
+        padding:13px;
+    }
+
+    textarea{
+        height:130px;
+    }
+
+
+    /* FOOTER */
+
+    footer{
+        display:block;
+        text-align:center;
+        padding:30px 5%;
+    }
+
+    footer p{
+        margin:8px;
+        line-height:1.5;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:450px){
+
+    nav{
+        padding:16px 4%;
+    }
+
+    nav ul{
+        gap:7px;
+    }
+
+    nav a{
+        font-size:11px;
+    }
+
+    .contact-btn{
+        padding:8px 12px;
+    }
+
+
+    .header{
+        padding:50px 15px;
+    }
+
+    .header h1{
+        font-size:36px;
+    }
+
+    .header p{
+        font-size:15px;
+    }
+
+
+    section{
+        padding:40px 4%;
+    }
+
+
+    .info{
+        padding:25px 20px;
+    }
+
+    .info h2{
+        font-size:25px;
+    }
+
+    .info-box h3{
+        font-size:17px;
+    }
+
+    .info-box p{
+        font-size:14px;
+    }
+
+
+    .form{
+        padding:25px 20px;
+    }
+
+    .form h2{
+        font-size:22px;
+        margin-bottom:20px;
+    }
+
+    label{
+        font-size:13px;
+    }
+
+    input,
+    textarea{
+        font-size:14px;
+    }
+
+    button{
+        font-size:15px;
+    }
+
+
+    footer{
+        padding:25px 4%;
+        font-size:13px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="logo">Yatriva</div>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="destinations.html">Destinations</a>
+</li>
+
+<li>
+<a href="packages.html">Packages</a>
+</li>
+
+<li>
+<a href="plan-trip.html">Plan a Trip</a>
+</li>
+
+<li>
+<a href="contact.html" class="contact-btn">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+<header class="header">
+
+<div class="label">
+LET'S TALK
+</div>
+
+<h1>
+Get in touch.
+</h1>
+
+<p>
+Have a question? Our travel team is ready to help.
+</p>
+
+</header>
+
+
+<section>
+
+<div class="contact">
+
+
+<div class="info">
+
+<h2>
+Contact Yatriva
+</h2>
+
+
+<div class="info-box">
+
+<div class="icon">
+📍
+</div>
+
+<h3>
+Visit Us
+</h3>
+
+<p>
+123 Travel Avenue<br>
+Ahmedabad, Gujarat<br>
+India
+</p>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="icon">
+📞
+</div>
+
+<h3>
+Call Us
+</h3>
+
+<p>
++91 8769999521
+</p>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="icon">
+✉️
+</div>
+
+<h3>
+Email
+</h3>
+
+<p>
+hello@Yatriva.com
+</p>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="icon">
+🕐
+</div>
+
+<h3>
+Working Hours
+</h3>
+
+<p>
+Monday - Saturday<br>
+9:00 AM - 7:00 PM
+</p>
+
+</div>
+
+
+<div class="social">
+
+<span>Instagram</span>
+<span>Facebook</span>
+<span>YouTube</span>
+
+</div>
+
+</div>
+
+
+
+<div class="form">
+
+<h2>
+Send us a message
+</h2>
+
+<form>
+
+
+<div class="field">
+
+<label>
+Your Name
+</label>
+
+<input
+type="text"
+placeholder="Enter your name">
+
+</div>
+
+
+<div class="field">
+
+<label>
+Email Address
+</label>
+
+<input
+type="email"
+placeholder="Enter your email">
+
+</div>
+
+
+<div class="field">
+
+<label>
+Subject
+</label>
+
+<input
+type="text"
+placeholder="What can we help with?">
+
+</div>
+
+
+<div class="field">
+
+<label>
+Message
+</label>
+
+<textarea
+placeholder="Write your message..."></textarea>
+
+</div>
+
+
+<button type="submit">
+Send Message →
+</button>
+
+
+</form>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+<strong>Yatriva</strong> — Every Safar Ka Smart Tarika.
+</p>
+
+<p>
+© 2026 Yatriva Travels
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
+

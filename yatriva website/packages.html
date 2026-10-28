@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yatriva | Travel Packages</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#172033;
+}
+
+nav{
+    height:78px;
+    padding:0 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:white;
+    border-bottom:1px solid #edf0f4;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:2px;
+    color:#102a43;
+}
+
+.logo span{
+    color:#f28c28;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#52606d;
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#f28c28;
+}
+
+.contact-btn{
+    background:#f28c28;
+    color:white !important;
+    padding:12px 21px;
+    border-radius:25px;
+}
+
+.header{
+    text-align:center;
+    padding:90px 20px;
+    background:#eef7ff;
+}
+
+.label{
+    color:#f28c28;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.header h1{
+    font-size:55px;
+    color:#102a43;
+    margin:18px 0 12px;
+}
+
+.header p{
+    color:#7b8794;
+    font-size:18px;
+}
+
+section{
+    padding:75px 8%;
+}
+
+.packages{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.package{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 30px rgba(16,42,67,.08);
+    border:1px solid #edf0f4;
+    position:relative;
+    transition:.35s;
+}
+
+.package:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(16,42,67,.15);
+}
+
+.package img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.package-content{
+    padding:28px;
+}
+
+.package h2{
+    color:#102a43;
+    margin-bottom:7px;
+}
+
+.duration{
+    color:#9aa5b1;
+    font-size:14px;
+}
+
+.price{
+    color:#f28c28;
+    font-size:34px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.price span{
+    color:#9aa5b1;
+    font-size:13px;
+    font-weight:normal;
+}
+
+.features{
+    list-style:none;
+    border-top:1px solid #edf0f4;
+    padding-top:15px;
+    color:#627d98;
+    line-height:2.2;
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    margin-top:22px;
+    padding:14px;
+    background:#f28c28;
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#d97516;
+}
+
+.popular{
+    border:2px solid #f28c28;
+}
+
+.badge{
+    position:absolute;
+    top:18px;
+    right:18px;
+    background:#f28c28;
+    color:white;
+    padding:8px 13px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+footer{
+    padding:35px 8%;
+    background:#102a43;
+    color:#bcccdc;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer strong{
+    color:white;
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+    nav{
+        padding:0 4%;
+    }
+
+    nav ul{
+        gap:18px;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .packages{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .header{
+        padding:80px 20px;
+    }
+
+    .header h1{
+        font-size:48px;
+    }
+
+    .package-content{
+        padding:24px;
+    }
+
+    .price{
+        font-size:30px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    nav{
+        height:auto;
+        min-height:78px;
+        padding:18px 5%;
+        flex-direction:column;
+        gap:18px;
+    }
+
+    nav ul{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .contact-btn{
+        padding:10px 17px;
+    }
+
+    .header{
+        padding:70px 20px;
+    }
+
+    .header h1{
+        font-size:40px;
+    }
+
+    .header p{
+        font-size:16px;
+        line-height:1.5;
+    }
+
+    section{
+        padding:50px 6%;
+    }
+
+    .packages{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .package img{
+        height:250px;
+    }
+
+    .package-content{
+        padding:24px;
+    }
+
+    .price{
+        font-size:32px;
+    }
+
+    footer{
+        display:block;
+        text-align:center;
+        padding:30px 6%;
+    }
+
+    footer p{
+        margin:8px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:450px){
+
+    .logo{
+        font-size:24px;
+    }
+
+    nav{
+        gap:15px;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .contact-btn{
+        padding:9px 14px;
+    }
+
+    .header{
+        padding:60px 15px;
+    }
+
+    .label{
+        font-size:11px;
+        letter-spacing:2px;
+    }
+
+    .header h1{
+        font-size:33px;
+        margin:15px 0 10px;
+    }
+
+    .header p{
+        font-size:15px;
+    }
+
+    section{
+        padding:40px 5%;
+    }
+
+    .package img{
+        height:220px;
+    }
+
+    .package-content{
+        padding:20px;
+    }
+
+    .package h2{
+        font-size:22px;
+    }
+
+    .duration{
+        font-size:13px;
+    }
+
+    .price{
+        font-size:28px;
+        margin:17px 0;
+    }
+
+    .features{
+        font-size:14px;
+    }
+
+    .btn{
+        padding:13px;
+    }
+
+    footer{
+        font-size:13px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Yatriva</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="destinations.html">Destinations</a></li>
+<li><a href="packages.html">Packages</a></li>
+<li><a href="plan-trip.html">Plan a Trip</a></li>
+<li><a href="contact.html" class="contact-btn">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header class="header">
+
+<div class="label">TRAVEL PACKAGES</div>
+
+<h1>Choose your perfect escape.</h1>
+
+<p>Simple packages. Great experiences. No unnecessary complications.</p>
+
+</header>
+
+<section>
+
+<div class="packages">
+
+<div class="package">
+
+<img src="bali.png">
+
+<div class="package-content">
+
+<h2>Bali Escape</h2>
+
+<p class="duration">5 Days • 4 Nights</p>
+
+<div class="price">
+₹39,999 <span>/ person</span>
+</div>
+
+<ul class="features">
+<li>✓ 4-Star Hotel</li>
+<li>✓ Daily Breakfast</li>
+<li>✓ Airport Transfers</li>
+<li>✓ Island Sightseeing</li>
+<li>✓ Travel Assistance</li>
+</ul>
+
+<a href="plan-trip.html" class="btn">
+Choose Package
+</a>
+
+</div>
+
+</div>
+
+
+<div class="package popular">
+
+<div class="badge">MOST POPULAR</div>
+
+<img src="maldives.png">
+
+<div class="package-content">
+
+<h2>Maldives Escape</h2>
+
+<p class="duration">4 Days • 3 Nights</p>
+
+<div class="price">
+₹49,999 <span>/ person</span>
+</div>
+
+<ul class="features">
+<li>✓ Luxury Beach Resort</li>
+<li>✓ Breakfast & Dinner</li>
+<li>✓ Speedboat Transfer</li>
+<li>✓ Island Tour</li>
+<li>✓ Travel Assistance</li>
+</ul>
+
+<a href="plan-trip.html" class="btn">
+Choose Package
+</a>
+
+</div>
+
+</div>
+
+
+<div class="package">
+
+<img src="switzerland.png">
+
+<div class="package-content">
+
+<h2>Swiss Adventure</h2>
+
+<p class="duration">7 Days • 6 Nights</p>
+
+<div class="price">
+₹89,999 <span>/ person</span>
+</div>
+
+<ul class="features">
+<li>✓ Premium Hotels</li>
+<li>✓ Daily Breakfast</li>
+<li>✓ Mountain Tours</li>
+<li>✓ Local Transport</li>
+<li>✓ Travel Assistance</li>
+</ul>
+
+<a href="plan-trip.html" class="btn">
+Choose Package
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p><strong>Yatriva</strong> — Every Safar Ka Smart Tarika.</p>
+
+<p>© 2026 Yatriva Tours</p>
+
+</footer>
+
+</body>
+
+</html>
+

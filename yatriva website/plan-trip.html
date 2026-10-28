@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yatriva | Plan Your Trip</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#172033;
+}
+
+nav{
+    height:78px;
+    padding:0 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:white;
+    border-bottom:1px solid #edf0f4;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:2px;
+    color:#102a43;
+}
+
+.logo span{
+    color:#f28c28;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#52606d;
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#f28c28;
+}
+
+.contact-btn{
+    background:#f28c28;
+    color:white !important;
+    padding:12px 21px;
+    border-radius:25px;
+}
+
+.header{
+    text-align:center;
+    padding:90px 20px;
+    background:
+    linear-gradient(rgba(255,255,255,.88),rgba(255,255,255,.9)),
+    url("trip.png");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.header .label{
+    color:#f28c28;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.header h1{
+    color:#102a43;
+    font-size:55px;
+    margin:18px 0 12px;
+}
+
+.header p{
+    color:#7b8794;
+}
+
+section{
+    padding:70px 8%;
+}
+
+.form-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:22px;
+    box-shadow:0 10px 40px rgba(16,42,67,.09);
+    border:1px solid #edf0f4;
+}
+
+.form-title{
+    margin-bottom:30px;
+}
+
+.form-title h2{
+    color:#102a43;
+    font-size:30px;
+}
+
+.form-title p{
+    color:#7b8794;
+    margin-top:8px;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.field{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    color:#334e68;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #d9e2ec;
+    background:#fbfdff;
+    color:#172033;
+    border-radius:9px;
+    outline:none;
+    font-size:14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#f28c28;
+}
+
+textarea{
+    height:130px;
+    resize:none;
+}
+
+button{
+    width:100%;
+    padding:16px;
+    border:0;
+    border-radius:30px;
+    background:#f28c28;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#d97516;
+}
+
+footer{
+    padding:35px 8%;
+    background:#102a43;
+    color:#bcccdc;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer strong{
+    color:white;
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+    nav{
+        padding:0 4%;
+    }
+
+    nav ul{
+        gap:18px;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .header{
+        padding:80px 20px;
+    }
+
+    .header h1{
+        font-size:48px;
+    }
+
+    .form-box{
+        padding:35px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    nav{
+        height:auto;
+        min-height:78px;
+        padding:18px 5%;
+        flex-direction:column;
+        gap:18px;
+    }
+
+    nav ul{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .contact-btn{
+        padding:10px 17px;
+    }
+
+    .header{
+        padding:70px 20px;
+    }
+
+    .header h1{
+        font-size:40px;
+    }
+
+    .header p{
+        font-size:16px;
+        line-height:1.5;
+    }
+
+    section{
+        padding:50px 6%;
+    }
+
+    .form-box{
+        padding:28px;
+        border-radius:18px;
+    }
+
+    .form-title h2{
+        font-size:27px;
+    }
+
+    .row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    footer{
+        display:block;
+        text-align:center;
+        padding:30px 6%;
+    }
+
+    footer p{
+        margin:8px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:450px){
+
+    .logo{
+        font-size:24px;
+    }
+
+    nav{
+        gap:15px;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .contact-btn{
+        padding:9px 14px;
+    }
+
+    .header{
+        padding:60px 15px;
+    }
+
+    .header .label{
+        font-size:11px;
+        letter-spacing:2px;
+    }
+
+    .header h1{
+        font-size:33px;
+        margin:15px 0 10px;
+    }
+
+    .header p{
+        font-size:15px;
+    }
+
+    section{
+        padding:40px 5%;
+    }
+
+    .form-box{
+        padding:22px;
+    }
+
+    .form-title{
+        margin-bottom:25px;
+    }
+
+    .form-title h2{
+        font-size:24px;
+    }
+
+    .form-title p{
+        font-size:14px;
+        line-height:1.5;
+    }
+
+    label{
+        font-size:13px;
+    }
+
+    input,
+    select,
+    textarea{
+        padding:13px;
+        font-size:13px;
+    }
+
+    textarea{
+        height:120px;
+    }
+
+    button{
+        padding:14px;
+        font-size:15px;
+    }
+
+    footer{
+        font-size:13px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Yatriva</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="destinations.html">Destinations</a></li>
+<li><a href="packages.html">Packages</a></li>
+<li><a href="plan-trip.html">Plan a Trip</a></li>
+<li><a href="contact.html" class="contact-btn">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header class="header">
+
+<div class="label">MAKE IT YOURS</div>
+
+<h1>Plan your perfect trip.</h1>
+
+<p>Tell us what you're looking for and we'll help you plan it.</p>
+
+</header>
+
+<section>
+
+<div class="form-box">
+
+<div class="form-title">
+
+<h2>Tell us about your trip</h2>
+
+<p>Fill in your details and travel preferences.</p>
+
+</div>
+
+<form>
+
+<div class="row">
+
+<div class="field">
+
+<label>Full Name</label>
+
+<input type="text" placeholder="Enter your name">
+
+</div>
+
+<div class="field">
+
+<label>Email Address</label>
+
+<input type="email" placeholder="you@example.com">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="field">
+
+<label>Destination</label>
+
+<select>
+
+<option>Select destination</option>
+<option>Bali</option>
+<option>Maldives</option>
+<option>Switzerland</option>
+<option>Japan</option>
+<option>Greece</option>
+<option>India</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>Number of Travellers</label>
+
+<input type="number" placeholder="e.g. 4">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="field">
+
+<label>Departure Date</label>
+
+<input type="date">
+
+</div>
+
+<div class="field">
+
+<label>Trip Duration</label>
+
+<select>
+
+<option>Select duration</option>
+<option>3 - 4 Days</option>
+<option>5 - 7 Days</option>
+<option>8 - 10 Days</option>
+<option>10+ Days</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="field">
+
+<label>Estimated Budget</label>
+
+<select>
+
+<option>Select budget</option>
+<option>Under ₹30,000</option>
+<option>₹30,000 - ₹50,000</option>
+<option>₹50,000 - ₹1,00,000</option>
+<option>₹1,00,000+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>Tell us about your trip</label>
+
+<textarea placeholder="Beach vacation, adventure, family trip, honeymoon, etc."></textarea>
+
+</div>
+
+<button type="submit">
+Create My Trip
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p><strong>Yatriva</strong> — Every Safar Ka Smart Tarika.</p>
+
+<p>© 2026 Yatriva Tours</p>
+
+</footer>
+
+</body>
+
+</html>

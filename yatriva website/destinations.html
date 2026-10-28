@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yatriva | Destinations</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#172033;
+}
+
+nav{
+    height:78px;
+    padding:0 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:white;
+    border-bottom:1px solid #edf0f4;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:2px;
+    color:#102a43;
+}
+
+.logo span{
+    color:#f28c28;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#52606d;
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#f28c28;
+}
+
+.contact-btn{
+    background:#f28c28;
+    color:white !important;
+    padding:12px 21px;
+    border-radius:25px;
+}
+
+.header{
+    padding:100px 20px;
+    text-align:center;
+    background:
+    linear-gradient(rgba(16,42,67,.7),rgba(16,42,67,.7)),
+    url("desti.png");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.header .label{
+    color:#ffd8a8;
+    font-size:13px;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+.header h1{
+    font-size:60px;
+    margin:20px 0 12px;
+}
+
+.header p{
+    color:#e6edf3;
+    font-size:18px;
+}
+
+section{
+    padding:80px 8%;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 7px 25px rgba(16,42,67,.08);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(16,42,67,.15);
+}
+
+.card-img{
+    height:260px;
+    overflow:hidden;
+}
+
+.card-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.card-content{
+    padding:25px;
+}
+
+.location{
+    color:#f28c28;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+
+.card h2{
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#7b8794;
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+.explore{
+    color:#f28c28;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+footer{
+    padding:35px 8%;
+    background:#102a43;
+    color:#bcccdc;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer strong{
+    color:white;
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+    nav{
+        padding:0 4%;
+    }
+
+    nav ul{
+        gap:18px;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .header{
+        padding:80px 20px;
+    }
+
+    .header h1{
+        font-size:50px;
+    }
+
+    .card-img{
+        height:230px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    nav{
+        height:auto;
+        min-height:78px;
+        padding:18px 5%;
+        flex-direction:column;
+        gap:18px;
+    }
+
+    nav ul{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .contact-btn{
+        padding:10px 17px;
+    }
+
+    .header{
+        padding:70px 20px;
+    }
+
+    .header h1{
+        font-size:42px;
+    }
+
+    .header p{
+        font-size:16px;
+        line-height:1.5;
+    }
+
+    section{
+        padding:50px 6%;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .card-img{
+        height:250px;
+    }
+
+    .card-content{
+        padding:22px;
+    }
+
+    footer{
+        display:block;
+        text-align:center;
+        padding:30px 6%;
+    }
+
+    footer p{
+        margin:8px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:450px){
+
+    .logo{
+        font-size:24px;
+    }
+
+    nav{
+        gap:15px;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .contact-btn{
+        padding:9px 14px;
+    }
+
+    .header{
+        padding:60px 15px;
+    }
+
+    .header .label{
+        font-size:11px;
+        letter-spacing:2px;
+    }
+
+    .header h1{
+        font-size:34px;
+        margin:15px 0 10px;
+    }
+
+    .header p{
+        font-size:15px;
+    }
+
+    section{
+        padding:40px 5%;
+    }
+
+    .card-img{
+        height:220px;
+    }
+
+    .card-content{
+        padding:20px;
+    }
+
+    .card h2{
+        font-size:23px;
+    }
+
+    .card p{
+        font-size:14px;
+    }
+
+    footer{
+        font-size:13px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Yatriva</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="destinations.html">Destinations</a></li>
+<li><a href="packages.html">Packages</a></li>
+<li><a href="plan-trip.html">Plan a Trip</a></li>
+<li><a href="contact.html" class="contact-btn">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header class="header">
+
+<div class="label">EXPLORE THE WORLD</div>
+
+<h1>Find your destination.</h1>
+
+<p>
+Beautiful places. Amazing experiences. Endless possibilities.
+</p>
+
+</header>
+
+<section>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="card-img">
+
+<img src="bali.png">
+
+</div>
+
+<div class="card-content">
+
+<div class="location">🇮🇩 INDONESIA</div>
+
+<h2>Bali</h2>
+
+<p>
+Tropical beaches, temples, rice terraces and peaceful
+island experiences.
+</p>
+
+<a href="plan-trip.html" class="explore">Plan a Bali Trip →</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-img">
+
+<img src="maldives.png">
+
+</div>
+
+<div class="card-content">
+
+<div class="location">🇲🇻 INDIAN OCEAN</div>
+
+<h2>Maldives</h2>
+
+<p>
+Crystal-clear waters, luxury resorts and beautiful
+private islands.
+</p>
+
+<a href="plan-trip.html" class="explore">Plan a Maldives Trip →</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-img">
+
+<img src="switzerland.png">
+
+</div>
+
+<div class="card-content">
+
+<div class="location">🇨🇭 SWITZERLAND</div>
+
+<h2>Switzerland</h2>
+
+<p>
+Majestic mountains, beautiful lakes and unforgettable
+alpine landscapes.
+</p>
+
+<a href="plan-trip.html" class="explore">Plan a Swiss Trip →</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-img">
+
+<img src="japan.png">
+
+</div>
+
+<div class="card-content">
+
+<div class="location">🇯🇵 JAPAN</div>
+
+<h2>Japan</h2>
+
+<p>
+Ancient traditions, modern cities, incredible food and
+beautiful scenery.
+</p>
+
+<a href="plan-trip"
